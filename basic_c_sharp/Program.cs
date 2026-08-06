@@ -77,8 +77,13 @@ static void FunWithStringBuilder()
   sb.AppendLine("2 - Reset Game");
   sb.AppendLine("Deus Ex" + "2");
   Console.WriteLine(sb.ToString());
+  Console.WriteLine("Using sb.Replace(2, Release)");
   sb.Replace("2", "Release");
   Console.WriteLine(sb.ToString());
+
+  // Make a StringBuilder with an initial size of 256.
+  StringBuilder sb2 = new StringBuilder("**** Fantastic Games ****", 256);
+  Console.WriteLine(sb2.ToString());
 }
 
 FunWithStringBuilder();
