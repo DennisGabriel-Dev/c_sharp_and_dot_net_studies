@@ -1,4 +1,6 @@
-﻿string myLongString = @"This is a very
+﻿using System.Text;
+
+string myLongString = @"This is a very
      very
           very
                long string";
@@ -56,7 +58,8 @@ static void StringsEquality(){
 StringsEquality();
 
 
-static void StringsAreImutable(){
+static void StringsAreImutable()
+{
  Console.WriteLine("=> Strings are Imutable:");
  string s1 = "Hi!";
  s1 = "Hello!";
@@ -64,3 +67,18 @@ static void StringsAreImutable(){
 }
 
 StringsAreImutable();
+
+
+static void FunWithStringBuilder()
+{
+  StringBuilder sb = new StringBuilder("*** Fantastic Games ***");
+  sb.Append('\n');
+  sb.AppendLine("1 - Menu");
+  sb.AppendLine("2 - Reset Game");
+  sb.AppendLine("Deus Ex" + "2");
+  Console.WriteLine(sb.ToString());
+  sb.Replace("2", "Release");
+  Console.WriteLine(sb.ToString());
+}
+
+FunWithStringBuilder();
