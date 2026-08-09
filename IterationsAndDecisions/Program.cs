@@ -53,6 +53,21 @@ static void WhileLoopExample()
     userIsDone = userIsDone.ToLower();
   }
 }
-
-
 WhileLoopExample();
+Console.WriteLine("----------------------");
+
+
+static void DoWhileLoopExample()
+{
+  Console.WriteLine("DoWhileLoopExample()");
+  string userIsDone = "";
+  do
+  {
+    Console.WriteLine("In while loop");
+    Console.Write("Are you done? [yes]/[no] -> ");
+    userIsDone = Console.ReadLine() ?? "no";
+    userIsDone = userIsDone.ToLower();
+  }
+  while(userIsDone != "yes");
+}
+DoWhileLoopExample();
