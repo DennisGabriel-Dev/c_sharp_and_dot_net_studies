@@ -23,3 +23,19 @@ static void ForEachExample()
 }
 
 ForEachExample();
+Console.WriteLine("----------------------");
+static void LinqQueryOverInts()
+{
+  Console.WriteLine("LinqQueryOverInts()");
+  int[] numbers = {10, 20, 30, 40, 1, 2, 3, 4};
+
+  var filterInts = from num in numbers where num > 10 select num;
+
+  Console.WriteLine("Values in subset: ");
+  foreach(int n in filterInts)
+  {
+    Console.WriteLine(n);
+  }
+}
+
+LinqQueryOverInts();
