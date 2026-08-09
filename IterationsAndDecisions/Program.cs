@@ -39,3 +39,20 @@ static void LinqQueryOverInts()
 }
 
 LinqQueryOverInts();
+Console.WriteLine("----------------------");
+
+static void WhileLoopExample()
+{
+  Console.WriteLine("WhileLoopExample()");
+  string userIsDone = "";
+  while(userIsDone != "yes")
+  {
+    Console.WriteLine("In while loop");
+    Console.Write("Are you done? [yes]/[no] -> ");
+    userIsDone = Console.ReadLine() ?? "no";
+    userIsDone = userIsDone.ToLower();
+  }
+}
+
+
+WhileLoopExample();
