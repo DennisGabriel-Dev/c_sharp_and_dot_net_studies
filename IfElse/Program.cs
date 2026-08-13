@@ -70,3 +70,22 @@ static void IfElsePatternMatchingUpdatedInCSharp9()
 
 
 IfElsePatternMatchingUpdatedInCSharp9();
+
+
+static void BuildingMyOwnMathing()
+{
+  char c = '-';
+  Type cType = c.GetType();
+  Console.WriteLine($"Type of 'c' is {cType}");
+
+  if(c is >= 'a' and <= 'z' or >= 'A' and <= 'Z')
+  {
+    Console.WriteLine($"'c' makes part of alphabet");
+  }
+  else
+  {
+    Console.WriteLine($"'c' does not makes part of alphabet");
+  }
+}
+
+BuildingMyOwnMathing();
