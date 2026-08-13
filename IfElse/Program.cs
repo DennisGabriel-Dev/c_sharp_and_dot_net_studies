@@ -78,14 +78,11 @@ static void BuildingMyOwnMathing()
   Type cType = c.GetType();
   Console.WriteLine($"Type of 'c' is {cType}");
 
-  if(c is >= 'a' and <= 'z' or >= 'A' and <= 'Z')
-  {
-    Console.WriteLine($"'c' makes part of alphabet");
-  }
-  else
-  {
-    Console.WriteLine($"'c' does not makes part of alphabet");
-  }
+  Console.WriteLine(
+    c is >= 'a' and <= 'z' or >= 'A' and <= 'Z' 
+    ? "makes part of alphabet" 
+    : "'c' does not makes part of alphabet"
+  );
 }
 
 BuildingMyOwnMathing();
