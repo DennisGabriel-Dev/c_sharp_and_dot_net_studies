@@ -111,3 +111,29 @@ static void ConditionRefReference()
 }
 
 ConditionRefReference();
+
+
+static void SwitchStatement()
+{
+  Console.WriteLine("================ SwitchStatement ===============/n");
+  Console.WriteLine("1 [C#], 2 [Java]");
+  Console.WriteLine("Please pick your language:");
+
+  string langChoice = Console.ReadLine();
+  int n = int.Parse(langChoice);
+
+  switch(n)
+  {
+    case 1:
+      Console.WriteLine("Good choice, C# is a fine language");
+      break;
+    case 2:
+      Console.WriteLine("Nice, Java is a great language as well");
+      break;
+    default:
+      Console.WriteLine("Well... good luck with that!");
+      break;
+    }
+}
+
+SwitchStatement();
